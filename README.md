@@ -14,3 +14,5 @@ The resulting friends have an attached comment so they are distinguished from yo
 #            - "clean":      clean LoW members from list
 #  preffile: optional path to preferences file, otherwise automatically determined
 ```
+
+You can for example run `wesnoth-ladder-friends.sh add-ladder` in your crontab or desktop autostart.
