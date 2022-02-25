@@ -22,7 +22,9 @@ MODE=""
 
 # Path to Preferences file
 PREFFILE=~/.config/wesnoth-1.14/preferences
-[[ -n "$2" ]] && PREFFILE="$2"
+[[ -r ~/.config ]] && WES_CFG=$(find ~/.config/ -name wesnoth-* -type d |sort --version-sort |tail -n1)  #try autosearch most recent version
+[[ -n $WES_CFG ]] && PREFFILE=$WES_CFG/preferences
+[[ -n "$2" ]] && PREFFILE="$2" #override preffile if given as parameter
 [[ ! -w "$PREFFILE" ]] && echo "ERROR: preffile not writable: $PREFFILE" && exit 1
 
 
